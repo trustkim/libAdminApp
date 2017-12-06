@@ -1,0 +1,62 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our Library
+
+    // Wrapper
+    #wrapper
+
+        // BOOK INFO
+        #bookInfo
+            h2 Book Info
+            p
+                strong BookID:
+                span#bookInfoID
+                br                
+                strong Title:
+                span#bookInfoTitle
+                br
+                strong Author:
+                span#bookInfoAuthor
+                br
+                strong Publisher:
+                span#bookInfoPublisher
+                br
+                strong Year:
+                span#bookInfoYear
+                br
+                strong ISBN:
+                span#bookInfoISBN
+        // /BOOK INFO
+
+
+        // BOOK LIST
+        h2 Book List
+        #bookList
+            table
+                thead
+                    th BookID
+                    th BookTitle
+                    th Delete?
+                tbody
+        // /BOOK LIST
+
+
+        // ADD BOOK
+        h2 Add Book
+        #addBook
+            fieldset
+                input#inputBookID(type='text', placeholder='BookID')
+                input#inputBookTitle(type='text', placeholder='BookTitle')
+                br                
+                input#inputBookAuthor(type='text', placeholder='BookAuthor')
+                input#inputBookPublisher(type='text', placeholder='Publisher')
+                br
+                input#inputBookYear(type='text', placeholder='Year')
+                input#inputBookISBN(type='text', placeholder='ISBN')
+                br
+                button#btnAddBook Add Book
+        // /ADD BOOK
+
+    // /WRAPPER
